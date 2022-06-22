@@ -17,12 +17,12 @@ def findifstring():
 
 
 def searchbyarg(a):
-    templatespath = os.getcwd()+"\\""templates"
-    filtername=str(a)
+    templatespath = os.getcwd() + "/"+"templates"
+    filtername = str(a)
     print(os.getcwd())
     print('Get current file name :    ', __file__)
-    print('nresş'+ (templatespath))
-    count=0
+    print('get templatepath' + (templatespath))
+    count = 0
     for files in Path(templatespath).rglob('*.*'):
        splittedfilename= str(files).split("templates\\",2)
        ret = str(splittedfilename[1]).__eq__(filtername)
@@ -33,19 +33,18 @@ def searchbyarg(a):
     if (count==0):
       print("no file found")
 
+
 def determinetheseverity(files):
-   try:
-       with open(files) as f: data = yaml.load(f, Loader=SafeLoader)
-   except TypeError:
-       print("please check the name of the yaml file")
-   else:
-    dictinfo = (data.get('info'))
-    print("Severity" + ":" + dictinfo.get('severity'))
+    try:
+        with open(files) as f:
+            data = yaml.load(f, Loader=SafeLoader)
+    except TypeError:
+        print("please check the name of the yaml file")
+    else:
+        dictinfo = (data.get('info'))
+        print("Severity" + ":" + dictinfo.get('severity'))
+
 
 new = findifstring()
-files=searchbyarg(new)
+files = searchbyarg(new)
 determinetheseverity(files)
-
-
-
-
