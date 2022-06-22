@@ -3,5 +3,5 @@ WORKDIR /usr/src/app
 COPY . .
 RUN pip  install -r requirements.txt
 ENTRYPOINT ["python"]
-CMD ["python",".mainlinux.py"]
+CMD ["python","./mainlinux.py"]
 
