@@ -1,7 +1,7 @@
 FROM python:3.9
-ADD main.py .
-ADD templates/* .
-RUN pip install requests beautifulsoup4 python-dotenv
-WORKDIR /
-CMD ["python","./main.py"]
+WORKDIR /appsample
+COPY . /appsample
+RUN pip install requirements.txt
+ENTRYPOINT ["python"]
+CMD [./main.py"]
 
