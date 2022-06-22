@@ -1,7 +1,7 @@
 FROM python:3.9
-WORKDIR /
-COPY . /
+WORKDIR /applocal
+COPY . /applocal
 RUN pip  install -r requirements.txt
 ENTRYPOINT ["python"]
-CMD ["./main.py"]
+CMD [" python ./mainlinux.py"]
 
