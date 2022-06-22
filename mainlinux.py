@@ -25,7 +25,7 @@ def searchbyarg(a):
        splittedfilename= str(files).split('/templates/',2)
        ret = str(splittedfilename[1]).__eq__(filtername)
        if(ret):
-        print("The file located at "+ files)
+        print("The file located at "+str(files))
         return(str(files))
         ++count
     if (count==0):
