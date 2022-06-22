@@ -4,5 +4,5 @@ COPY . .
 RUN pip  install -r requirements.txt
 ENV environment default_env_value
 ENTRYPOINT ["python"]
-CMD ["sh", "-c","python ./usr/src/app/mainlinux.py ${environment}"]
+CMD ["sh", "-c","python /usr/src/app/mainlinux.py ${environment}"]
 
