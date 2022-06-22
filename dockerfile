@@ -1,7 +1,7 @@
 FROM python:3.9
 WORKDIR /appsample
 COPY . /appsample/
-RUN pip -r install requirements.txt
+RUN pip  install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["./main.py"]
 
