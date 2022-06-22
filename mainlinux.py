@@ -4,7 +4,7 @@ from yaml.loader import SafeLoader
 import os
 from pathlib import Path
 
-
+# Findifstring checks the argument to accept only string arguments
 def findifstring():
     try:
         a = int(sys.argv[1])
@@ -23,10 +23,9 @@ def searchbyarg(a):
     count=0
     for files in Path(templatespath).rglob('*.*'):
        splittedfilename= str(files).split('/templates/',2)
-       print(splittedfilename[1])
        ret = str(splittedfilename[1]).__eq__(filtername)
        if(ret):
-        print(files)
+        print("The file located at "+ files)
         return(str(files))
         ++count
     if (count==0):
