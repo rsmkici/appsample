@@ -17,6 +17,7 @@ def findifstring():
 
 
 def searchbyarg(a):
+    os.mkdir('/applocal/appsample')
     os.chdir('/applocal/appsample/')
     templatespath = os.getcwd()+'/'+'templates'
     filtername=str(a)

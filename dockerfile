@@ -1,9 +1,7 @@
-FROM alpine:3.4
-WORKDIR /
-COPY . /
-RUN apk update
-RUN apk add python
+FROM python:3.8
+WORKDIR /usr/src/app
+COPY . .
 RUN pip  install -r requirements.txt
 ENTRYPOINT ["python"]
-CMD [" python ./mainlinux.py"]
+CMD ["python","mainlinux.py"]
 
