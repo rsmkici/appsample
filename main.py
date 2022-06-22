@@ -24,7 +24,7 @@ def searchbyarg(a):
     print('get templatepath' + (templatespath))
     count = 0
     for files in Path(templatespath).rglob('*.*'):
-       splittedfilename= str(files).split("templates\\",2)
+       splittedfilename= str(files).split("templates//",2)
        ret = str(splittedfilename[1]).__eq__(filtername)
        if(ret):
         print(files)
