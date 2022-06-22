@@ -17,7 +17,7 @@ def findifstring():
 
 
 def searchbyarg(a):
-    os.mkdir('/usr/src/app/applocal/appsample/)
+    os.mkdir('/usr/src/app/applocal/appsample/')
     os.chdir('/usr/src/app/applocal/appsample/')
     templatespath = os.getcwd()+'/'+'templates'
     filtername=str(a)
