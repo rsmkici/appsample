@@ -15,7 +15,7 @@ def findifstring():
         print("please enter a string value")
         raise SystemExit
 
-
+#searchbyarg checks if the nuclei-template passed by argument exists in folder
 def searchbyarg(a):
     templatespath = os.getcwd()+'/'+'templates'
     filtername=str(a)
@@ -31,6 +31,7 @@ def searchbyarg(a):
     if (count==0):
       print("no file found")
 
+#determinetheseverity checks the severity of the vulnerability
 def determinetheseverity(files):
    try:
        with open(files) as f: data = yaml.load(f, Loader=SafeLoader)
