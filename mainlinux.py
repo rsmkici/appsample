@@ -20,15 +20,12 @@ def searchbyarg(a):
     templatespath = os.getcwd()+'/'+'templates'
     filtername=str(a)
     print(os.getcwd())
-    print('Get current file name :', __file__)
-    print('get filename'+ (templatespath))
     count=0
     for files in Path(templatespath).rglob('*.*'):
        splittedfilename= str(files).split('/templates/',2)
        print(splittedfilename[1])
        ret = str(splittedfilename[1]).__eq__(filtername)
        if(ret):
-        print(splittedfilename[1])
         print(files)
         return(str(files))
         ++count
