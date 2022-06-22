@@ -22,19 +22,16 @@ def searchbyarg(a):
     print(os.getcwd())
     print('Get current file name :    ', __file__)
     print('nresş'+ (templatespath))
-
+    count=0
     for files in Path(templatespath).rglob('*.*'):
-       count=int(0)
        splittedfilename= str(files).split("templates\\",2)
        ret = str(splittedfilename[1]).__eq__(filtername)
        if(ret):
         print(files)
         return(str(files))
         ++count
-       else:
-           count=0
     if (count==0):
-       print("no file found")
+      print("no file found")
 
 def determinetheseverity(files):
    try:

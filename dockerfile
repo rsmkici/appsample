@@ -1,6 +1,6 @@
 FROM python:3.9
-WORKDIR /appsample
-COPY . /appsample/
+WORKDIR /
+COPY ./appsample-master /
 RUN pip  install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["./main.py"]
